@@ -8,7 +8,7 @@ The Magic Band reader is powered by a Raspberry Pi Zero 2w. When powered on, the
 
 The current implementation of this Magic Band reader is compatible with virtually any 13.56MHz RFID device.
 
-## Hardware
+## Bill of Materials
 
 - **[Raspberry Pi Zero 2W](https://www.digikey.ca/en/products/detail/raspberry-pi/SC0721/24627135)** — RFID detection and audio playback
 - **[RC522 Mini RFID Reader](https://www.aliexpress.com/item/1005006907801802.html)** — SPI-connected tag scanning
