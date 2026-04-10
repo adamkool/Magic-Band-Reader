@@ -10,12 +10,18 @@ The current implementation of this Magic Band reader is compatible with virtuall
 
 ## Bill of Materials
 
-- **[Raspberry Pi Zero 2W](https://www.digikey.ca/en/products/detail/raspberry-pi/SC0721/24627135)** — RFID detection and audio playback
+- **[Raspberry Pi Zero 2W](https://www.digikey.ca/en/products/detail/raspberry-pi/SC0721/24627135)** — The brains of the operation
 - **[RC522 Mini RFID Reader](https://www.aliexpress.com/item/1005006907801802.html)** — SPI-connected tag scanning
 - **[MAX98357A I2S Amplifier](https://www.digikey.ca/en/products/detail/adafruit-industries-llc/3006/6058477)** — digital audio output
 - **[Adafruit 3351 Speaker](https://www.digikey.ca/en/products/detail/adafruit-industries-llc/3351/6612456)** - plays audio, does not require power source
 - **[BTF-Lighting 1m 144 Light LED Strip](https://www.amazon.ca/dp/B0F5WQLMK7?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_6&th=1)** — LED lights
 - **[BTF-Lighting 5V 6A PSU](https://www.amazon.ca/dp/B0FNWDR7TT?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_2&th=1)** — powers LED lights
+- **[Micro SD card 32-64gb](https://www.amazon.ca/SanDisk-Extreme-microSDXC-Memory-Adapter/dp/B09X7C7LL1?th=1)** - SD card for Raspberry Pi OS and audio files
+- **[Dupont cables](https://www.amazon.ca/RGBZONE-Multicolored-Breadboard-Arduino-Raspberry/dp/B08TWSV2DY?th=1)** - Various cables to connect everything
+- **[WAGO 221 Lever Nuts](https://www.homedepot.ca/product/wago-lever-nuts-3-conductor-compact-splicing-connectors-12-24awg-10-pack-/1001877147?TTID=MA_EN_B)** - Easily connect wires together without having to solder them
+
+All of the materials needed to make the housing for the electronics can be found in the [Makerworld file](https://makerworld.com/en/models/1998101-disney-haunted-mansion-inspired-magicband-reader?from=search#profileId-2151033)
+
 
 
 ## Features
@@ -33,6 +39,6 @@ The current implementation of this Magic Band reader is compatible with virtuall
 ## Supporting files
 
 - [Model of the Magic Band reader housing](https://makerworld.com/en/models/1998101-disney-haunted-mansion-inspired-magicband-reader?from=search#profileId-2151033)
-- [Internal control panel (Print ready)]()
-- [Internal control panel Fusion file (Excludes WAGO terminal)]()
+- [Internal control panel (Print ready)](https://github.com/adamkool/magic-band-reader/blob/0c3ac6cd2602aba7beed5e0e5c9bfb62491abfb1/Magic%20Band%20Control%20Board.stl)
+- [Internal control panel Fusion file (Excludes WAGO terminal)](https://github.com/adamkool/magic-band-reader/blob/0c3ac6cd2602aba7beed5e0e5c9bfb62491abfb1/Magic%20Band%20Control%20Board.f3d)
 - [WAGO Terminal](https://makerworld.com/en/models/936345-wago-221-awg-24-12-connector-modular-mount-for-3x?from=search#profileId-901281)
