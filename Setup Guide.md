@@ -20,10 +20,6 @@ A beginner-friendly guide to building an RFID-triggered audio player with LED an
 | Micro USB cable | Powers the Pi |
 | Jumper wires | Female-to-female |
 
-### Optional but Recommended
-- 470Ω resistor (LED data line protection)
-- 1000µF capacitor (LED power smoothing)
-
 ---
 
 ## Part 1 — Wiring
