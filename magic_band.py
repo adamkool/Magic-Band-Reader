@@ -2,7 +2,6 @@
 """
 Magic Band - Raspberry Pi Only
 Controls RFID reader, audio playback, AND WS2812B LEDs directly.
-No ESP32 required.
 
 Run with: sudo python3 magic_band.py
 """
@@ -18,8 +17,8 @@ from rpi_ws281x import PixelStrip, Color
 
 # LED Configuration
 LED_PIN        = 12       # GPIO 12 (Pin 32)
-NUM_LEDS       = 42
-LED_BRIGHTNESS = 125      # 0-255
+NUM_LEDS       = 42       # Total number of LEDs in your strip(s)
+LED_BRIGHTNESS = 125      # 0-255 (125 = ~50%)
 LED_FREQ_HZ    = 800000   # Signal frequency (800kHz for WS2812B)
 LED_DMA        = 0        # 0 = PWM mode, avoids SPI/RFID conflict
 LED_INVERT     = False
@@ -35,12 +34,13 @@ GAIN_PIN = 23
 RST_PIN          = 25
 COOLDOWN_SECONDS = 0.5
 
-# Animation speeds (seconds)
-IDLE_CHASE_DELAY       = 0.035
-TRIGGER_CHASE_DELAY    = 0.015
-TRIGGER_CHASE_DURATION = 1.0   # How long the trigger chase runs (seconds)
-FLASH_ON_TIME          = 1.5   # How long solid green stays on (seconds)
-FLASH_OFF_TIME         = 0.2   # Pause after flash before idle resumes
+# Animation timing (seconds)
+IDLE_CHASE_DELAY       = 0.035  # Idle green chase speed (higher = slower)
+TRIGGER_CHASE_DELAY    = 0.012  # Trigger chase speed (higher = slower)
+TRIGGER_CHASE_DURATION = 0.9    # How long the trigger chase runs
+FLASH_DELAY            = 0.0    # Pause between chase and solid green flash
+FLASH_ON_TIME          = 2.0    # How long solid green stays on
+FLASH_OFF_TIME         = 0.1    # Pause after flash before idle resumes
 
 # ============= RFID SETUP =============
 
@@ -139,7 +139,9 @@ def trigger_animation(start_pos):
         pos = (pos + 1) % NUM_LEDS
         time.sleep(TRIGGER_CHASE_DELAY)
 
-    # Flash green
+    # Brief pause then flash green
+    clear_strip()
+    time.sleep(FLASH_DELAY)
     for i in range(NUM_LEDS):
         strip.setPixelColor(i, Color(0, 255, 0))
     strip.show()
