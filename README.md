@@ -2,6 +2,8 @@
 
 Last Halloween I came across [this video](https://www.youtube.com/watch?v=f09JSgdGhIk) in a Facebook group with a replica of the Haunted Mansion Magic Band reader for the Lightning Lane at Disney World. Fortunately, the creator made the 3D print files available, but excluded the electronics that make it come to life. The electronics were excluded due to a complex, multi-unit custom implementation. Since my kids love going to Disney, I wanted to build one for them. There's also been growing interest in a standalone solution — so this is for everyone who would like to build their own.
 
+<img alt="mb-reader-static" src="https://github.com/user-attachments/assets/b52963d8-96a4-4b9d-b553-0d87c9bf57ff" />
+
 ## Overview
 
 The Magic Band reader is powered by a Raspberry Pi Zero 2w. When powered on, the Raspberry Pi will automatically run the program. In the idle state, the LED lights will circle the reader. When an RFID card is presented to the reader, an LED animation is triggered along with a "chime" sound. If the audio is replaced with something longer, there is an option to tap the RFID card again which will stop the audio. The lights will briefly turn the lights red to acknowledge the tap.
@@ -42,3 +44,5 @@ All of the materials needed to make the housing for the electronics can be found
 - [Internal control panel (Print ready)](https://github.com/adamkool/magic-band-reader/blob/0c3ac6cd2602aba7beed5e0e5c9bfb62491abfb1/Magic%20Band%20Control%20Board.stl)
 - [Internal control panel Fusion file (Excludes WAGO terminal)](https://github.com/adamkool/magic-band-reader/blob/0c3ac6cd2602aba7beed5e0e5c9bfb62491abfb1/Magic%20Band%20Control%20Board.f3d)
 - [WAGO Terminal](https://makerworld.com/en/models/936345-wago-221-awg-24-12-connector-modular-mount-for-3x?from=search#profileId-901281)
+
+
